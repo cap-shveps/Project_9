@@ -1,0 +1,1414 @@
+@charset "UTF-8";
+/* Доп. библиотеки */ /* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: content-box;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+    display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+    font-size: 100%;
+ /* 1 */
+    -webkit-text-size-adjust: 100%;
+ /* 2 */
+    -ms-text-size-adjust: 100%;
+ /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+    border: 0;
+ /* 1 */
+    -ms-interpolation-mode: bicubic;
+ /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+    margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+    margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+    border: 0;
+ /* 1 */
+    padding: 0;
+    white-space: normal;
+ /* 2 */
+    *margin-left: -7px;
+ /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+ /* 1 */
+    margin: 0;
+ /* 2 */
+    vertical-align: baseline;
+ /* 3 */
+    *vertical-align: middle;
+ /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+    -webkit-appearance: button;
+ /* 2 */
+    cursor: pointer;
+ /* 3 */
+    *overflow: visible;
+ /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type=checkbox],
+input[type=radio] {
+    box-sizing: border-box;
+ /* 1 */
+    padding: 0;
+ /* 2 */
+    *height: 13px;
+ /* 3 */
+    *width: 13px;
+ /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+    -webkit-appearance: textfield;
+ /* 1 */ /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+    overflow: auto;
+ /* 1 */
+    vertical-align: top;
+ /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Полный сброс стандартных свойств браузеров */
+/* @import 'libs/bootstrap-reboot.min'; */ /* Нормализация стандартных свойств браузеров */
+/* @import 'libs/bootstrap-grid.min'; */ /* Bootstrap контейнеры */
+@font-face {
+    font-family: "name_fonts";
+  font-display: swap;
+  src: url("../fonts/");
+  src: url("../fonts/") format("embedded-opentype"), url("../fonts/") format("woff"), url("../fonts/") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+    font-family: "name_fonts";
+  font-display: swap;
+  src: url("../fonts/");
+  src: url("../fonts/") format("embedded-opentype"), url("../fonts/") format("woff"), url("../fonts/") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+    font-family: "name_fonts";
+  font-display: swap;
+  src: url("../fonts/");
+  src: url("../fonts/") format("embedded-opentype"), url("../fonts/") format("woff"), url("../fonts/") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+/* Шрифты */
+/* @import 'libs/slick'; */ /* библиотека слайдеров */
+/* @import 'libs/animate'; */ /* библиотека анимаций */
+/* Переменные */
+/* #181818 */
+/* #202020 */
+/* #121212 */
+/* #1C1C1C */
+/* #0D0D0D */
+/* #ED3024 */
+/* #3137C9 */
+/* #ffffff */
+/* #D2D2D2 */
+/* Миксины */
+* {
+    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
+ /* Стандартный шрифт сайта */
+}
+
+*, * ::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #efedef;
+    font-size: 1.4rem;
+    color: #000;
+}
+
+.page {
+    overflow: hidden;
+}
+
+/* Если не подключена библиотека bootstrap-grid, стандартный контейнер */
+.container {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 5rem 0 5rem;
+}
+
+/* Блоки по БЭМ */
+/* @import 'base/animations'; */
+.date {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+}
+
+.date_stories {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    padding: 1.4rem;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    color: #ffffff;
+}
+
+.date_post {
+    color: #828282;
+}
+
+.text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.text__post {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: #000;
+}
+
+.mt15 {
+    margin-top: 1.5rem;
+}
+
+.mt25 {
+    margin-top: 2.5rem;
+}
+
+.mt40 {
+    margin-top: 4rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+}
+
+.pagination__item {
+    margin: 0 0.5rem;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.1s all;
+}
+
+.pagination__item:hover {
+    background-color: rgba(0, 171, 228, 0.6901960784);
+}
+
+.pagination__item:active {
+    background-color: rgba(0, 171, 228, 0.6901960784);
+}
+
+.pagination__link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form_auth {
+    display: flex;
+    align-items: center;
+}
+
+.form__group_280w {
+    width: 280px;
+}
+
+.form__control {
+    display: block;
+    width: 100%;
+    border: none;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: inherit;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: #202020;
+    border-bottom: 1px solid #c7c7c7;
+    transition: 0.5s all;
+}
+
+.form__control-textarea {
+    resize: none;
+    height: 2.8rem;
+    overflow: hidden;
+}
+
+.form__control:focus {
+    border-bottom: 1px solid rgba(0, 171, 228, 0.6901960784);
+}
+
+.form__control_mt25 {
+    margin-top: 2.5rem;
+}
+
+.form__control_mt25:first-child {
+    margin-top: 0;
+}
+
+.form_mt45 {
+    margin-top: 4.5rem;
+}
+
+.form__profile {
+    display: grid;
+    grid-template-columns: 340px 150px;
+    -moz-column-gap: 110px;
+    column-gap: 110px;
+}
+
+.form__avatar img {
+    height: 150px;
+    width: 150px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.form__file input {
+    display: none;
+}
+
+/* БЭМ - вверхняя часть сайта */
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 100;
+    width: calc(100% - 300px);
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+header__left {
+    width: 60%;
+}
+
+header__right {
+    width: 40%;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    position: relative;
+    transition: 0.1s all;
+}
+
+.nav__item:hover {
+    background-color: rgba(0, 171, 228, 0.6901960784);
+}
+
+.nav__item:hover > .subnav {
+    display: block;
+}
+
+.nav__item:active {
+    background-color: rgba(0, 171, 228, 0.6901960784);
+}
+
+.nav__link {
+    display: block;
+    padding: 1.5rem;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav__link.link_subnav::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 1.2rem;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    width: 16.5rem;
+    background-color: #ffffff;
+    border-radius: 0 0 5px 5px;
+}
+
+.subnav__item {
+    border-radius: 0;
+    transition: 0.1s all;
+}
+
+.subnav__item:hover {
+    background-color: rgba(0, 171, 228, 0.6901960784);
+}
+
+.subnav__item:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+.subnav__link {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.search {
+    width: 21.2rem;
+    height: 4rem;
+    background-color: #f5f5f5;
+    border: none;
+    padding: 0 2rem;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #202020;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100vh;
+    width: 300px;
+    background-color: #f5f5f5;
+    box-shadow: 5px 0px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar__header {
+    height: 180px;
+}
+
+.sidebar__img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.sidebar__content {
+    position: relative;
+    margin-top: -5.2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.sidebar__descr {
+    margin-top: 30px;
+    width: 260px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000;
+    text-align: center;
+}
+
+.sidebar__footer {
+    padding: 0 2rem;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile__avatar {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid #efedef;
+    border-radius: 100%;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.25);
+}
+
+.profile__name {
+    margin-top: 18px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 21px;
+}
+
+.profile__prof {
+    margin-top: 4px;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 16px;
+    text-align: center;
+    color: #202020;
+}
+
+.social {
+    margin-top: 18px;
+    width: 105px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social__link {
+    display: block;
+    transition: 0.1s all;
+}
+
+.social__link:hover {
+    transform: scale(1.1);
+}
+
+.social__link:active {
+    transform: scale(0.9);
+}
+
+.divider {
+    margin-top: 3rem;
+    width: 100%;
+    border: 1px solid #c7c7c7;
+    border-radius: 100%;
+}
+
+.button {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(0, 171, 228, 0.6901960784);
+    box-shadow: 0px 7px 17px -10px rgba(0, 171, 228, 0.35);
+    color: #000;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 14px;
+    transition: 0.1s all;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.button:hover {
+    transform: scale(1.02);
+}
+
+.button__link {
+    text-decoration: none;
+}
+
+.button_red {
+    background-color: #ffaf01;
+    box-shadow: 0px 7px 17px -10px rgba(255, 175, 1, 0.2);
+}
+
+.button_red:hover {
+    box-shadow: 0px 7px 17px 0px rgba(255, 175, 1, 0.2);
+}
+
+.button_commit {
+    margin-top: 1.5rem;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.button_rounded {
+    height: 30px;
+    border-radius: 5px;
+}
+
+.button a {
+    color: #000;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 14px;
+    transition: 0.1s all;
+    text-decoration: none;
+}
+
+.button_mt25 {
+    margin-top: 2.5rem;
+}
+
+.button_w90 {
+    width: 90px;
+}
+
+.button_w-auto {
+    padding: 8px 15px;
+    width: auto;
+}
+
+.main {
+    padding: 10rem 0 8rem 300px;
+}
+
+.stories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 15px;
+    grid-template-rows: 195px;
+    margin-bottom: 3rem;
+}
+
+.stories__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #c7c7c7;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    transition: 0.1s all;
+}
+
+.stories__item::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.stories__item:hover {
+    transform: scale(1.1);
+    filter: brightness(120%);
+}
+
+.stories__preview {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+.stories__title {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    padding: 1.4rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.stories__title {
+    top: 0;
+    left: 0;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.actions_signup {
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.actions__data {
+    display: flex;
+    justify-content: start;
+}
+
+.actions__categories_gray {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+    color: #828282;
+}
+
+.actions__categories_gray a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.actions__categories_gray a:hover {
+    text-decoration: underline;
+}
+
+.actions__categories_gray::before {
+    content: "◆";
+    margin: 0 1.8rem;
+    color: #828282;
+}
+
+.actions__list {
+    display: flex;
+    justify-content: end;
+}
+
+.actions__link_blue-link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-align: right;
+    color: #107EFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.actions__link_blue-link:hover {
+    filter: brightness(70%);
+}
+
+.actions__link_gray-link {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: 0.1s all;
+    margin-left: 1rem;
+}
+
+.actions__link_gray-link:first-child {
+    margin-left: 0;
+}
+
+.actions__link_gray-link:hover {
+    opacity: 1;
+}
+
+.actions__link_share-icon {
+    position: relative;
+    margin-right: 2.5rem;
+}
+
+.actions__link_share-icon::before {
+    content: url(../images/icons/share-icon.svg);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -25px;
+    transform: translateY(-10%);
+}
+
+.addPost {
+    margin-bottom: 3rem;
+    padding: 1.5rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+}
+
+.addPost__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addPost__text {
+    width: 80%;
+    height: 2.5rem;
+    border: none;
+    background: transparent;
+    resize: none;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: #202020;
+}
+
+.addPost__actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.addPost__file, .addPost__send {
+    display: block;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    transition: 0.1s all;
+}
+
+.addPost__file:hover, .addPost__send:hover {
+    filter: brightness(90%);
+}
+
+.addPost__file {
+    background: #EBEBEB url(../images/icons/addPost-photo-icon.svg) center no-repeat;
+}
+
+.addPost__file input {
+    display: none;
+}
+
+.addPost__send {
+    margin-left: 1.5rem;
+    background: rgba(0, 171, 228, 0.6901960784) url(../images/icons/addPost-send-icon.svg) center no-repeat;
+}
+
+.page {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.page__title {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 21px;
+    color: #000;
+    margin-bottom: 3rem;
+}
+
+.page__title_center {
+    text-align: center;
+}
+
+.post {
+    margin-bottom: 3rem;
+    padding: 2.5rem 2.5rem 4rem 2.5rem;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.post__header {
+    display: block;
+    margin: -2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.post__header iframe, .post__header video, .post__header object, .post__header embed {
+    display: block;
+    width: 100%;
+}
+
+.post__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.post__content {
+    display: block;
+}
+
+.post__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: #000;
+}
+
+.post__title_mt15 {
+    margin-top: 1.5rem;
+}
+
+.post__title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post__title a:hover {
+    text-decoration: underline;
+}
+
+.post__title_fz16 {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+}
+
+.post__footer {
+    margin-top: 2rem;
+}
+
+.post__recom {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post__recom-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 35px;
+    margin-top: 2.4rem;
+}
+
+.post__recom-item:nth-child(-n+2) {
+ /* Убрать свойство для первых двух элементов */
+    margin-top: 0;
+}
+
+.post__recom-title {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #107EFF;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.post__recom-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post__recom-title a:hover {
+    filter: brightness(70%);
+}
+
+.hidden {
+    display: none;
+}
+
+.mt15 {
+    margin-top: 1.5rem;
+}
+
+.comments {
+    margin-top: 5rem;
+}
+
+.comments__item > .comments {
+    margin-top: 3rem;
+    padding-left: 3rem;
+}
+
+.comments__header {
+    display: grid;
+    grid-template-columns: 30px auto;
+    grid-row: repeat(2, auto);
+    gap: 2px 15px;
+}
+
+.comments__avatar {
+    grid-row: 1/3;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.comments__name {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.comments__date {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #828282;
+}
+
+.comments__text {
+    margin-top: 1.5rem;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #000;
+}
+
+.comments__reply {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #107EFF;
+    cursor: pointer;
+}
+
+.comments__reply:hover {
+    filter: brightness(60%);
+}
+
+.works {
+    position: relative;
+    margin-bottom: 3rem;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.works__preview {
+    max-width: 50%;
+    flex-grow: 1;
+}
+
+.works__preview img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.works__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding: 2.5rem;
+    flex-grow: 1;
+}
+
+.works__title {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.works__title a {
+    color: #000;
+    text-decoration: none;
+}
+
+.works__title a:hover {
+    text-decoration: underline;
+}
+
+.works__descr {
+    margin-top: 30px;
+}
+
+.works__descr p {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.works__button {
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.tags {
+    display: flex;
+    justify-content: start;
+    margin-top: 22px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tags__item {
+    height: 21px;
+    border-radius: 3px;
+    padding: 4px 9px;
+    margin-top: 8px;
+    margin-right: 8px;
+    background-color: #ffaf01;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000;
+    text-align: center;
+}
+
+.signup {
+    margin: 0 auto;
+    width: 280px;
+}
+
+/* Адаптация сайта */
+/* Адаптация сайта под разные разрешения и устройства*/
+/* Смартфоны: 320px - 575px */
+@media (max-width: 575px) {
+  /*  */
+}

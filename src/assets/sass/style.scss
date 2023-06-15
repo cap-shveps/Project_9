@@ -1,0 +1,71 @@
+/* Доп. библиотеки */
+@import 'libs/reset.scss'; /* Полный сброс стандартных свойств браузеров */
+/* @import 'libs/bootstrap-reboot.min'; */ /* Нормализация стандартных свойств браузеров */
+/* @import 'libs/bootstrap-grid.min'; */ /* Bootstrap контейнеры */
+@import 'libs/fonts'; /* Шрифты */
+/* @import 'libs/slick'; */  /* библиотека слайдеров */
+/* @import 'libs/animate'; */ /* библиотека анимаций */
+
+@import 'base/variables', 'base/mixins';
+
+*{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Стандартный шрифт сайта */
+}
+
+*,* ::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; //62.5% = 10px, способ для адаптации текста под разные размеры.
+}
+
+body {
+    background-color: $main-bg-color;
+    font-size: 1.4rem; //Далее указываем текст в rem, то есть выше мы указали, что rem в тексте равен 10px.
+    color: $main-text-color;
+}
+
+.page {
+    overflow: hidden; //убирает все, что вылезает за пределы экрана. Отключить при адаптации.
+}
+
+/* Если не подключена библиотека bootstrap-grid, стандартный контейнер */
+.container { 
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 5rem 0 5rem;
+}
+
+/* Блоки по БЭМ */
+/* @import 'base/animations'; */
+
+@import 'details/links';
+@import 'details/date';
+@import 'details/text';
+@import 'details/pagenation';
+@import 'details/form';
+
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/subnav';
+@import 'blocks/search';
+@import 'blocks/sidebar';
+@import 'blocks/profile';
+@import 'blocks/social';
+@import 'blocks/divider';
+@import 'blocks/buttons';
+@import 'blocks/main';
+@import 'blocks/stories';
+@import 'blocks/actions';
+@import 'blocks/addPost';
+@import 'blocks/page';
+@import 'blocks/post';
+@import 'blocks/comments';
+@import 'blocks/works';
+@import 'blocks/tags';
+@import 'blocks/signup';
+
+/* Адаптация сайта */
+@import 'base/media'; 

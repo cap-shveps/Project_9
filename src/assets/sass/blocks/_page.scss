@@ -1,0 +1,21 @@
+.page {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+
+    &__title {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 21px;
+
+        color: $main-text-color;
+        margin-bottom: 3rem;
+
+        &_center {
+            text-align: center;
+        }
+    }
+}

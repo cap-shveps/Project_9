@@ -1,0 +1,79 @@
+.comments {
+    margin-top: 5rem;
+
+    &__item {
+        > .comments {
+            margin-top: 3rem;
+            padding-left: 3rem;
+        }
+    }
+
+    &__header {
+        display: grid;
+        grid-template-columns: 30px auto;
+        grid-row: repeat(2, auto);
+        gap: 2px 15px;
+    }
+
+    &__avatar {
+        grid-row: 1/3;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        object-fit: cover;
+    }
+
+    &__name {
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+
+        color: $main-text-color;
+
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__date {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+
+        color: $date-element-color;
+    }
+
+    &__text {
+        margin-top: 1.5rem;
+
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+
+        color: $main-text-color;
+    }
+
+    &__reply {
+        background: none;
+        border: none;
+        padding: 0;
+
+        margin-top: 0.5rem;
+
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+
+        color: $link-element-color;
+        cursor: pointer;
+
+        &:hover {
+            filter: brightness(60%);
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.date {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+
+    &_stories {
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+
+        padding: 1.4rem;
+
+        bottom: 0;
+        right: 0;
+        text-align: right;
+
+        color: $stories-text-color; 
+    }
+
+    &_post {
+        color: $date-element-color;
+    }
+}

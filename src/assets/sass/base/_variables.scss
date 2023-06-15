@@ -1,0 +1,35 @@
+/* Переменные */
+//bg color:
+$main-bg-color: #efedef; /* #181818 */
+
+$first-bg-color: #f5f5f5; /* #202020 */
+$second-bg-color: #dddddd; /* #121212 */
+$third-bg-color: #c7c7c7; /* #1C1C1C */
+$header-color: #ffffff; /* #0D0D0D */
+
+//element color:
+$first-element-color: #ffaf01; /* #ED3024 */
+$second-element-color: #00abe4b0; /* #3137C9 */
+$shadow-color: #000;
+$third-element-color: #EBEBEB;
+$date-element-color: #828282;
+$link-element-color: #107EFF;
+
+//Text color:
+$main-text-color: #000; /* #ffffff */
+$second-text-color: #202020; /* #D2D2D2 */
+$stories-text-color: #ffffff; 
+
+//z-index:
+$z-index-sidebar: 100;
+$z-index-header: 100;
+
+//properties:
+$sidebar-width: 300px;
+
+//transition:
+$global-transition: 0.1s all;
+
+//border-radius:
+$global-border-radius: 8px;
+$post-border-radius: 0 8px 8px 0;

@@ -1,0 +1,62 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-index-sidebar;
+
+    height: 100vh;
+    width: $sidebar-width;
+
+    background-color: $first-bg-color;
+    box-shadow: 5px 0px 12px rgba($shadow-color, 0.1);
+
+    &__header {
+        height: 180px;
+    }
+
+    &__img {
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        object-fit: cover; //если будет загружена другая картинка, она подстроиться под размер
+    }
+
+    &__content {
+        position: relative;
+        margin-top: -5.2rem;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 0 2rem;
+    }
+    &__descr {
+        margin-top: 30px;
+        width: 260px;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+
+        color: $main-text-color;
+        text-align: center;
+    }
+    &__footer {
+        padding: 0 2rem;
+        width: 100%;
+        margin-top: 30px;
+
+        display: flex;
+        justify-content: center;
+    }
+    &__buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}

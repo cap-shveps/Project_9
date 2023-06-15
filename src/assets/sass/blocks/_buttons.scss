@@ -1,0 +1,77 @@
+.button {
+    display: inline-block;
+
+    width: 120px;
+    height: 40px;
+
+    border: none;
+    border-radius: 25px;
+    background-color: $second-element-color;
+    box-shadow: 0px 7px 17px -10px rgba($second-element-color, 0.35);
+    
+    color: $main-text-color;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 14px;
+
+    transition: $global-transition;
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &:hover {
+        transform: scale(1.02);
+    }
+    
+    &__link {
+        text-decoration: none;
+    }
+
+    &_red {
+        background-color: $first-element-color;
+        box-shadow: 0px 7px 17px -10px rgba($first-element-color, 0.2);
+
+        &:hover {
+            box-shadow: 0px 7px 17px 0px rgba($first-element-color, 0.2);
+        }
+    }
+
+    &_commit {
+        margin-top: 1.5rem;
+        width: 90px;
+        height: 30px;
+        
+        border-radius: 5px;
+    }
+
+    &_rounded {
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    a {
+        color: $main-text-color;
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 14px;
+
+        transition: $global-transition;
+        text-decoration: none;
+    }
+
+    &_mt25 {
+        margin-top: 2.5rem;
+    }
+
+    &_w90 {
+        width: 90px;
+    }
+    &_w-auto {
+        padding: 8px 15px;
+        width: auto;
+    }
+
+}

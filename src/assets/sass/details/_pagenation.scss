@@ -1,0 +1,41 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 8rem;
+
+    &__item {
+        margin: 0 0.5rem;
+        width: 40px;
+        height: 40px;
+
+        background-color: $header-color;
+        border-radius: 4px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 0 4px 8px rgba($shadow-color, 0.3);
+        transition: $global-transition;
+
+        &:hover {
+            background-color: $second-element-color;
+        }
+
+        &:active {
+            background-color: $second-element-color;
+        }
+    }
+
+    &__link {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+
+        text-decoration: none;
+        color: $main-text-color;
+    }
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Персональный блог</title>
+     <link rel="stylesheet" href="assets/css/style.min.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+
+        <header>
+            <div class="header__left">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="../index.html">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link_subnav" href="#">Статьи</a>
+                            <ul class="subnav">
+                                <li class="subnav__item">
+                                    <a class="subnav__link" href="#">Создание сайтов</a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a class="subnav__link" href="#">Интернет-маркетинг</a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a class="subnav__link" href="#">Продвижение видео</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="../contacts.html">Обо мне</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Реклама</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__right">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="profile.html">Профиль</a></li>
+                        <li class="nav__item"><a class="nav__link" href="signup.html">Войти</a></li>
+                        <li>
+                            <form action="search.html" method="get">
+                                <input class="search" type="text" placeholder="Поиск по блогу">
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <div class="sidebar__header">
+                <img src="https://img.freepik.com/premium-photo/laptop-and-sea-workplace-on-beach-distance-work-working-online-education-courses-online-training-learning-shopping-via-internet-ecommerce-vacation-holiday-and-work-freelance-3d-render_429124-3359.jpg" alt="Sidebar Background Images" class="sidebar__img">
+            
+            </div>
+            <div class="sidebar__content">
+                <div class="profile">
+                    <img src="https://www.perunica.ru/uploads/posts/2019-03/1552932077_1.jpg" alt="" class="profile__avatar">
+                    <h1 class="profile__name">Даниил Канев</h1>
+                    <h2 class="profile__prof">блог front-end разработчика</h2>
+                </div>
+                <ul class="social">
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <img src="../../assets/images/icons/sidebar-instagram-icon.svg" alt="instagram" class="social__icon">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <img src="../../assets/images/icons/sidebar-pinterest-icon.svg" alt="pinterest" class="social__icon">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <img src="../../assets/images/icons/sidebar-vk-icon.svg" alt="vk" class="social__icon">
+                        </a>
+                    </li>
+                </ul>
+                <div class="divider"></div>
+            
+                <p class="sidebar__descr">Front-end разработчик. Практик верстки сайтов.
+                    Созданием сайтов занимаюсь с 2022 года. Не работал в ИТ компаниях, но очень хочется попасть к ним.</p>
+                    
+                <div class="divider"></div>
+            </div>
+            <div class="sidebar__footer">
+                <ul class="sidebar__buttons">
+                    <li>
+                        <a class="button__link" href="works.html"><button class="button button_red">Мои работы</button></a>
+                    </li>
+                    <li>
+                        <button class="button">Написать мне</button>
+                    </li>
+                </ul>
+            </div>        </aside>
+    
+        <main class="main">
+            <div class="container">
+                
+                <div class="stories">
+                    <div class="stories__item">
+                        <img src="assets/images/img/Stories-bg-img.jpg" alt="Stories" class="stories__preview">
+                        <div class="stories__title">Переехал в новую квартиру</div>
+                        <time datetime="2020-09-21 13:41" class="date date_stories">21.09.2020</time>
+                    </div>
+                    <div class="stories__item">
+                        <img src="assets/images/img/Stories-bg-img-2.jpg" alt="Stories" class="stories__preview">
+                        <div class="stories__title">Осень пришла!</div>
+                        <time datetime="2020-09-15 13:32" class="date date_stories">15.09.2020</time>
+                    </div>
+                    <div class="stories__item">
+                        <img src="https://fireseo.ru/wp-content/uploads/2022/06/programming.jpeg" alt="Stories" class="stories__preview">
+                        <div class="stories__title">JS vs TS</div>
+                        <time datetime="2020-09-14 10:11" class="date date_stories">14.09.2020</time>
+                    </div>
+                    <div class="stories__item">
+                        <img src="https://img.kanal-o.ru/img/2020-06-29/fmt_81_24_shutterstock_547953349.jpg" alt="Stories" class="stories__preview">
+                        <div class="stories__title">Как приручить дракона?</div>
+                        <time datetime="2020-09-10 17:38" class="date date_stories">10.09.2020</time>
+                    </div>
+                </div>
+                <div class="addPost">
+                    <form action="/" method="post" class="addPost__form">
+                        <textarea name="post-text" placeholder="Напишите что-нибудь" class="addPost__text"></textarea>
+                
+                        <div class="addPost__actions">
+                            <label for="addPost-file" class="addPost__file">
+                                <input type="file" id="addPost-file">
+                            </label>
+                            <button class="addPost__send" type="submit"></button>
+                        </div>
+                    </form>
+                </div>
+                <article class="post">
+                
+                    <div class="post__content">
+                        <h2 class="post__title hidden">Без заголовока</h2> <!-- У тега article обязательно должен быть заголовок, если его нет, он должен быть скрыт -->
+                        <p class="text text__post">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum volutpat orci turpis urna. Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel volutpat.
+                        </p>
+                    </div>
+                
+                    <div class="post__footer">
+                        <div class="actions">
+                            <ul class="actions__data">
+                                <li>
+                                    <time datetime="2020-06-21 11:01" class="date date_post">21.06.2020</time>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post">
+                
+                    <div class="post__header">
+                        <a href="#">
+                            <img src="https://s.zagranitsa.com/images/articles/6729/870x486/53d189dfcd54fa9ecae756ddf5a7c2ee.jpg?1530714543" alt="Горы" class="post__img">
+                        </a>
+                    </div>
+                
+                    <div class="post__content">
+                        <h2 class="post__title">
+                            <a href="#">
+                                Как писать код быстро и безболезненно?
+                            </a>
+                        </h2>
+                        <p class="text text__post mt15">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum volutpat orci turpis urna. Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel volutpat.
+                        </p>
+                    </div>
+                
+                    <div class="post__footer">
+                        <div class="actions">
+                            <ul class="actions__data">
+                                <li>
+                                    <time datetime="2020-06-21 11:01" class="date date_post">21.06.2020</time>
+                                </li>
+                                <li class="actions__categories_gray">
+                                    <a href="#">создание сайтов</a>
+                                </li>
+                            </ul>
+                            <ul class="actions__list">
+                                <li class="actions__link">
+                                    <a class="actions__link_blue-link" href="#">читать</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post">
+                
+                    <div class="post__header">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/p4zbV1MBJNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                
+                    <div class="post__content">
+                        <h2 class="post__title">
+                            <a href="#">
+                                Верстка сайта HTML, GULP, SASS | Персональный блог #5
+                            </a>
+                        </h2>
+                    </div>
+                
+                    <div class="post__footer">
+                        <div class="actions">
+                            <ul class="actions__data">
+                                <li>
+                                    <time datetime="2020-06-21 09:41" class="date date_post">21.06.2020</time>
+                                </li>
+                                <li class="actions__categories_gray">
+                                    <a href="#">продвижение видео</a>
+                                </li>
+                            </ul>
+                            <ul class="actions__list">
+                                <li class="actions__link">
+                                    <a class="actions__link_blue-link" href="#">оставить комментарий</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post">
+                
+                    <div class="post__header">
+                        <a href="#">
+                            <img src="https://s1.1zoom.ru/b4865/248/Dogs_Black_Tongue_Amstaff_541993_1920x1080.jpg" alt="Пес" class="post__img">
+                        </a>
+                    </div>
+                
+                    <div class="post__content">
+                        <h2 class="post__title">
+                            <a href="#">
+                                Американский Стаффордширский терьер
+                            </a>
+                        </h2>
+                        <p class="text text__post mt15">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum volutpat orci turpis urna. Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel volutpat.
+                        </p>
+                    </div>
+                
+                    <div class="post__footer">
+                        <div class="actions">
+                            <ul class="actions__data">
+                                <li>
+                                    <time datetime="2020-06-21 11:01" class="date date_post">21.06.2020</time>
+                                </li>
+                                <li class="actions__categories_gray">
+                                    <a href="#">животные</a>
+                                </li>
+                            </ul>
+                            <ul class="actions__list">
+                                <li class="actions__link">
+                                    <a class="actions__link_blue-link" href="postpage.html">читать</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <ul class="pagination">
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="">&lt;</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="">1</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="">2</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="">3</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="">&gt;</a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        
+    </div>
+
+    <!-- Скрипты -->
+    <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <!-- <script src="assets/js/libs/slick.min.js"></script> -->
+    <!-- <script src="assets/js/libs/jquery.validate.min.js"></script> -->
+    <!-- <script src="assets/js/libs/jquery.maskedinput.min.js"></script> -->
+    <!-- <script src="assets/js/libs/wow.min.js"></script> -->       <!-- Скрипт для библ. анимации -->
+    <script src="assets/js/script.js"></script>    
+</body>
+</html>

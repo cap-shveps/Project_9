@@ -1,0 +1,85 @@
+.form {
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_auth {
+        display: flex;
+        align-items: center;
+    }
+
+    &__group {
+        &_280w {
+            width: 280px;
+        }
+    }
+    
+
+    &__control {
+        display: block;
+        width: 100%;
+
+        border: none;
+        background: none;
+
+        border-radius: 0;
+        box-shadow: none;
+
+        font-family: inherit;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+
+        color: $second-text-color;
+
+        border-bottom: 1px solid $third-bg-color;
+
+        transition: 0.5s all;
+
+        &-textarea {
+            resize: none;
+            height: 2.8rem;
+            overflow: hidden;
+        }
+
+        &:focus {
+            border-bottom: 1px solid $second-element-color;
+        }
+
+        &_mt25 {
+            margin-top: 2.5rem;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &_mt45 {
+        margin-top: 4.5rem;
+    }
+
+    &__profile {
+        display: grid;
+        grid-template-columns: 340px 150px;
+        column-gap: 110px;
+    }
+
+    &__avatar {
+        img {
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__file {
+        input {
+            display: none;
+        }
+    }
+}
