@@ -5,6 +5,11 @@
     display: flex;
     justify-content: space-between;
 
+    &_share {
+        margin-top: 0;
+        width: auto;
+    }
+
     &__link {
         display: block;
         transition: $global-transition;

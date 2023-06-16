@@ -15,6 +15,14 @@
             width: 280px;
         }
     }
+
+    &_modal {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        margin-top: 0;
+    }
     
 
     &__control {

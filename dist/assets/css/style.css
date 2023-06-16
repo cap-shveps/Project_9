@@ -423,6 +423,10 @@ body {
     color: #000;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 .page {
     overflow: hidden;
 }
@@ -532,6 +536,13 @@ body {
 
 .form__group_280w {
     width: 280px;
+}
+
+.form_modal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
 }
 
 .form__control {
@@ -801,6 +812,11 @@ header__right {
     justify-content: space-between;
 }
 
+.social_share {
+    margin-top: 0;
+    width: auto;
+}
+
 .social__link {
     display: block;
     transition: 0.1s all;
@@ -891,6 +907,30 @@ header__right {
 .button_w-auto {
     padding: 8px 15px;
     width: auto;
+}
+
+.button_cross, .button_cross-share {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    width: auto;
+    height: auto;
+    opacity: 0.5;
+}
+
+.button_cross:hover, .button_cross-share:hover {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.button_cross:active, .button_cross-share:active {
+    opacity: 0.8;
+}
+
+.button_cross-share {
+    top: 10px;
+    right: 8px;
 }
 
 .main {
@@ -1404,6 +1444,54 @@ header__right {
 .signup {
     margin: 0 auto;
     width: 280px;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal__content {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding: 8rem 8rem 2.5rem;
+    background-color: rgba(239, 237, 239, 0.8784313725);
+    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+.modal__content_share {
+    max-width: 300px;
+    padding: 4rem 4rem;
+}
+
+.modal__contact {
+    margin-top: 4rem;
+}
+
+.modal__share {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal__video {
+    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    max-height: 600px;
+}
+
+.invisible {
+    display: none;
 }
 
 /* Адаптация сайта */

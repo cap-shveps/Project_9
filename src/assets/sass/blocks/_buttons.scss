@@ -75,4 +75,30 @@
         width: auto;
     }
 
+    &_cross, &_cross-share {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        background: none;
+        width: auto;
+        height: auto;
+
+        opacity: 0.5;
+
+        &:hover {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &_cross-share {
+        top: 10px;
+        right: 8px;
+    }
+
 }
